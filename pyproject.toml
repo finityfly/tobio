@@ -1,0 +1,46 @@
+[project]
+name = "tobio"
+version = "0.1.0"
+description = "AI-powered volleyball video analysis platform — training environment"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "ipykernel>=6.29",
+    "notebook>=7.2",
+    "tensorflow==2.10.0",
+    "tensorflow-gpu==2.10.0",
+    "tensorflow-estimator==2.10.0",
+    "tensorboard>=2.10",
+    "numpy==1.24.3",
+    "matplotlib>=3.8",
+    "roboflow>=1.1",
+    "scikit-learn>=1.5",
+    "ultralytics>=8.3",
+    "awscli>=1.33",
+    "scipy>=1.13",
+    "wandb>=0.18",
+    "torch==2.1.0",
+    "torchvision==0.16.0",
+    "torchaudio==2.1.0",
+]
+
+# Transitive deps that only ship Linux wheels — skip them on Windows.
+#   tensorflow-io-gcs-filesystem: dropped win_amd64 wheels in v0.32+; cap to last Windows-compatible version.
+#   triton: Linux-only CUDA JIT compiler pulled by torch; not needed (or available) on Windows.
+[tool.uv]
+override-dependencies = [
+    "tensorflow-io-gcs-filesystem>=0.23.1,<0.32.0",
+    "triton ; sys_platform != 'win32'",
+]
+
+# PyTorch CUDA 11.8 wheels — change the index URL to target a different CUDA version
+# (e.g. cu121 for CUDA 12.1, cpu for CPU-only)
+[tool.uv.sources]
+torch = { index = "pytorch-cu118" }
+torchvision = { index = "pytorch-cu118" }
+torchaudio = { index = "pytorch-cu118" }
+
+[[tool.uv.index]]
+name = "pytorch-cu118"
+url = "https://download.pytorch.org/whl/cu118"
+explicit = true

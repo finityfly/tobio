@@ -83,7 +83,7 @@
 
 ### Prerequisites
 
-- Python 3.8+
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) (Python package manager)
 - Node.js 18+
 - pnpm package manager
 
@@ -91,10 +91,13 @@
 
 1. **Install Python dependencies**
    ```bash
-   pip install --index-url https://download.pytorch.org/whl/cu118 -r torch.txt
-   pip install -r requirements.txt
+   # Training environment (root)
+   uv sync
+
+   # Backend only
+   cd app/backend && uv sync
    ```
-- NOTE: These dependencies are tailored towards CUDA v11.8 (3060), please adjust the package versions to your system
+- NOTE: PyTorch is configured for CUDA 11.8 in `pyproject.toml`. To target a different version, change the `[[tool.uv.index]]` URL (e.g. `cu121` for CUDA 12.1, `cpu` for CPU-only).
 
 2. **Install frontend dependencies**
    ```bash
@@ -127,7 +130,7 @@
 **Start backend service**
 ```bash
 cd app/backend
-uvicorn api:app --reload --host 0.0.0.0 --port 8000
+uv run uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 **Start frontend development server**
