@@ -1,6 +1,0 @@
-fastapi
-fastapi[all]
-python-multipart
-uvicorn
-python-dotenv
-ultralytics

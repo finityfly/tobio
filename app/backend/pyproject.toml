@@ -1,0 +1,17 @@
+[project]
+name = "tobio-backend"
+version = "0.1.0"
+description = "Tobio FastAPI backend — volleyball video analysis service"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi[all]>=0.115",
+    "uvicorn[standard]>=0.30",
+    "python-multipart>=0.0.12",
+    "python-dotenv>=1.0",
+    "ultralytics>=8.3",
+    "torchvision>=0.19",
+    "scipy>=1.13",
+]
+
+# opencv-python-headless replaces opencv-python (pulled by ultralytics) in Docker.
+# Run `uv sync` then let the Dockerfile swap the variant — see Dockerfile for details.
