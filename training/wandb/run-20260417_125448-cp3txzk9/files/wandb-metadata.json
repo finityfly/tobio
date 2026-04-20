@@ -1,0 +1,40 @@
+{
+  "os":  "Windows-10-10.0.26200-SP0",
+  "python":  "CPython 3.10.11",
+  "startedAt":  "2026-04-17T16:54:48.324447Z",
+  "program":  "d:\\Coding\\tobio\\training\\1_court_tracking.ipynb",
+  "codePath":  "d:\\Coding\\tobio\\training\\1_court_tracking.ipynb",
+  "codePathLocal":  "1_court_tracking.ipynb",
+  "git":  {
+    "remote":  "https://github.com/finityfly/tobio.git",
+    "commit":  "a71a4c7f72ad93870813d0fc6d3a2e155c32b397"
+  },
+  "email":  "daniel1211.lu@gmail.com",
+  "root":  "d:\\Coding\\tobio\\training",
+  "host":  "Tank",
+  "executable":  "d:\\Coding\\tobio\\.venv\\Scripts\\python.exe",
+  "cpu_count":  12,
+  "cpu_count_logical":  20,
+  "gpu":  "NVIDIA GeForce RTX 3060",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "1000068870144",
+      "used":  "525073051648"
+    }
+  },
+  "memory":  {
+    "total":  "16881061888"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 3060",
+      "memoryTotal":  "12884901888",
+      "cudaCores":  3584,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-c7d8126c-7719-0d9a-266f-a219275a3156"
+    }
+  ],
+  "cudaVersion":  "13.1",
+  "writerId":  "ian522z19i6x5ybpfcuuvijcndkk79ub"
+}
