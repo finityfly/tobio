@@ -11,7 +11,7 @@
 *Alternative link: [tobio-rosy.vercel.app](https://tobio-rosy.vercel.app/)*
 
 <a href="https://tobio.daniellu.ca/" target="_blank">
-  <img src="app/frontend/tobio/src/assets/tobio_bg.png" alt="Tobio - Click to visit live app" width="200" style="cursor: pointer;"/>
+  <img src="app/frontend/src/assets/tobio_bg.png" alt="Tobio - Click to visit live app" width="200" style="cursor: pointer;"/>
 </a>
 
 ---
